@@ -1,0 +1,29 @@
+<h2>Lista de produtos</h2>
+<table class="table table-bordered"> <!-- Tabela com bordas -->
+    <thead class="thead-dark"> <!-- Cabeçalho da tabela escuro -->
+        <tr>
+            <th>ID</th>
+            <th>Imagem</th>
+            <th>Produto</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produto of produtos"> <!-- na escrita de "ngFor" as letras Maiusculas os minuscula faz todas diferença -->
+            <td>{{produto.id}}</td>
+            <td>
+                <img [src]="'assets/img/'+produto.foto" alt="Imagem 1" width="60" height="60"></td> <!-- não pode haver espaço entre o + e outros elementos-->
+            <td>{{produto.produto}}</td>
+            <td>{{produto.descricao}}</td>
+            <td>{{produto.preco}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editarProduto(produto.id)">Editar</button>
+                <button class="btn btn-danger" (click)="Exclusao(produto.id)">Excluir</button>
+                
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
