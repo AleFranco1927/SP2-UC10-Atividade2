@@ -20,6 +20,20 @@
       "descricao": "Descrição do Jogo 3",
       "foto": "jogo3.PNG",
       "preco": 600
+    },
+    {
+      "id": "6",
+      "produto": "teste",
+      "descricao": "Teste final",
+      "foto": "jogo3.PNG",
+      "preco": 100
+    },
+    {
+      "id": "7",
+      "produto": "teste",
+      "descricao": "Teste com um número pulado na lista de ID 1 2 3 4 x 6.",
+      "foto": "jogo1.PNG",
+      "preco": 200
     }
   ]
 }
