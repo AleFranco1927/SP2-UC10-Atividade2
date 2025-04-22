@@ -47,5 +47,5 @@ export class PainelPrincipalComponent {*/
 
   cadastrarProduto() {
     this.router.navigate(['/cadastro-produtos']) // Navega para a rota /cadastro-produtos
-  } // Método para excluir um produto pelo ID
+  }
 }
