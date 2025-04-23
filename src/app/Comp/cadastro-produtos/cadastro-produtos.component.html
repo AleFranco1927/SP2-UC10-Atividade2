@@ -1,22 +1,22 @@
-<h2>{{produto.id ? "Atualizar Produto":"Cadastrar Produto"}}</h2>
+<h2>{{DdProduto.id ? "Atualizar Produto":"Cadastrar Produto"}}</h2>
 
 <form (ngSubmit)="salvarProduto()">
     <div class="mb-3">
         <label for="nome">Nome do Produto:</label>
-        <input type="text" id="nome" class="form-control" [(ngModel)]="produto.produto" name="Produto" required>
+        <input type="text" id="nome" class="form-control" [(ngModel)]="DdProduto.produto" name="Produto" required>
     </div>
     <div class="mb-3">
-        <label for="nome">Descrição:</label>
-        <textarea id="nome" class="form-control" [(ngModel)]="produto.descricao" name="Descrição" required></textarea>
+        <label for="nome1">Descrição:</label>
+        <textarea id="nome1" class="form-control" [(ngModel)]="DdProduto.descricao" name="Descrição" required></textarea>
     </div>
     <div class="mb-3">
-        <label for="nome">Foto:</label>
-        <input type="text" id="nome" class="form-control" [(ngModel)]="produto.foto" name="Foto" required>
+        <label for="nome2">Foto:</label>
+        <input type="text" id="nome2" class="form-control" [(ngModel)]="DdProduto.foto" name="Foto" required>
     </div>
     <div class="mb-3">
-        <label for="nome">Preço:</label>
-        <input type="number" id="nome" class="form-control" [(ngModel)]="produto.preco" name="Preço" required>
+        <label for="nome3">Preço:</label>
+        <input type="number" id="nome3" class="form-control" [(ngModel)]="DdProduto.preco" name="Preço" required>
     </div>
-    <button type="submit" class="btn btn-success me-3" >{{produto.id ? "Atualizar":"Cadastrar"}}</button>
+    <button type="submit" class="btn btn-success me-3" >{{DdProduto.id ? "Atualizar":"Cadastrar"}}</button>
     <a routerLink="/painel-pricipal" class="btn btn-secondary">Cancelar</a>
 </form>

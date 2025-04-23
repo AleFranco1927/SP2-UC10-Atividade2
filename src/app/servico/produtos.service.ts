@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'; // Importa o HttpClient para fazer requisições HTTP
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 // Removed duplicate import of ProdutoService
 /* injectable proporciona que o  service pode ser usado em qual quer lugar*/
 
@@ -30,12 +30,10 @@ export class ProdutoService {
   deletarProduto(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`) // Retorna um Observable com o produto excluído
   }
-  // adicionarProduto(produto: Produto): Observable<Produto> {
-  //   return this.http.post<Produto>(this.apiUrl, {
-  //     ...produto,
-  //     id: undefined // Remove o ID para que o backend possa atribuir um ID sequencial
-  //   });
-  // }
-  // Adiciona um novo produto à lista de produtos  
+  obterUltimoId(): Observable<number> {
+    return this.http.get<any[]>(this.apiUrl).pipe(
+      map((produtos: any[]) => produtos.length > 0 ? Math.max(...produtos.map(p => p.id)) : 0)
+    ); // Retorna o último ID dos produtos cadastrados
+  }
 }
 
