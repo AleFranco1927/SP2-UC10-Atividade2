@@ -7,7 +7,7 @@
     </div>
     <div class="mb-3">
         <label for="nome">Descrição:</label>
-        <textarea id="nome" class="form-control" [(ngModel)]="produto.descricao" name="descrição" required></textarea>
+        <textarea id="nome" class="form-control" [(ngModel)]="produto.descricao" name="Descrição" required></textarea>
     </div>
     <div class="mb-3">
         <label for="nome">Foto:</label>
@@ -15,8 +15,8 @@
     </div>
     <div class="mb-3">
         <label for="nome">Preço:</label>
-        <input type="number" id="nome" class="form-control" [(ngModel)]="produto.preco" name="descrição" required>
+        <input type="number" id="nome" class="form-control" [(ngModel)]="produto.preco" name="Preço" required>
     </div>
-    <button type="submit" class="bnt bnt-success">{{produto.id ? "Atualizar":"Cadastrar"}}</button>
+    <button type="submit" class="btn btn-success me-3" >{{produto.id ? "Atualizar":"Cadastrar"}}</button>
     <a routerLink="/painel-pricipal" class="btn btn-secondary">Cancelar</a>
 </form>
