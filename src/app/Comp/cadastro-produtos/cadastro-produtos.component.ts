@@ -46,6 +46,8 @@ export class CadastroProdutosComponent {
           this.router.navigate(['/painel-principal']);
         });
       });
+    };
+      
       // this.PService.adicionarProduto(this.DdProduto).subscribe(() => {
       //   alert('Produto cadastrado com sucesso!');
       //   this.router.navigate(['/painel-principal']);
@@ -56,7 +58,8 @@ export class CadastroProdutosComponent {
       //   this.PService.adicionarProduto(this.DdProduto).subscribe(() => {
       //     alert('Produto cadastrado com sucesso!');
       //     this.router.navigate(['/painel-principal']);
-      };
+
+
     }
 
   }
